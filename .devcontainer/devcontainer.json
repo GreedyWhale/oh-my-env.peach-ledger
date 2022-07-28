@@ -1,0 +1,9 @@
+{
+  "name": "peach-ledger",
+  "dockerFile": "./Dockerfile",
+  "remoteUser": "root",
+  "context": "..",
+  "mounts": [
+    "source=root,target=/root,type=volume"
+  ]
+}
