@@ -3,13 +3,14 @@
   "dockerFile": "./Dockerfile",
   "runArgs": [
     "--name=peach-ledger.dev",
-		"--dns=114.114.114.114",
     "--network=peach-ledger-network",
 		"--privileged"
 	],
   "remoteUser": "root",
   "context": "..",
   "mounts": [
-    "source=peach-ledger.root,target=/root,type=volume"
+    "source=peach-ledger.root,target=/root,type=volume",
+    "source=peach-ledger.repos,target=/root/repos,type=volume",
+    "source=peach-ledger.ssh,target=/root/.ssh,type=volume"
   ]
 }
